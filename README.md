@@ -2,7 +2,7 @@
 - Two experiments:
   1. `exp1_crypto_benchmark.py` — benchmarks NIST PQC standards and classical crypto, with FIPS size checks and critical-infrastructure workload models.
   2. `exp2_migration_model.py` — analytical HNDL migration decision model, validated by quadrature/Monte-Carlo, plus sector portfolio and policy-value analysis.
-- Main files: `exp1_crypto_benchmark.py`, `exp2_migration_model.py`, `openssl_evp.py`, `run_all.py`, `requirements.txt`, `results/`, `figures/`.
+- Main files: `exp1_crypto_benchmark.py`, `exp2_migration_model.py`, `openssl_evp.py`, `run_all.py`, `requirements.txt`, `results/`.
 - Setup: Python ≥3.10; install `requirements.txt`; OpenSSL ≥3.5 needed for PQC harness.
 - Run: `python run_all.py` or run each experiment script individually.
 - Verify only: `python run_all.py --verify` → expected `27 entries checked, 0 mismatches`.
