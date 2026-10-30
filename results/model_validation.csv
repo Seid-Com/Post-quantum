@@ -1,0 +1,8 @@
+check,value,tolerance,status
+T1 closed-form vs quadrature,1.9218714384785618e-15,1e-08,PASS
+T1 closed-form vs Monte Carlo (N=200k),2.650621824876731,4.0,PASS
+T2 bracket signs (g(0+)<0<g(inf)),1.0,1.0,PASS
+T2 grid-argmin relative deviation (max),0.0027898301219112225,0.05,PASS
+T2 cost gap at m* vs grid min (max rel),1.7533188962748172e-05,0.01,PASS
+T3 monotonicity sign agreement (fraction),1.0,1.0,PASS
+T4 Monte Carlo feasibility coverage (all rows),1.0,1.0,PASS

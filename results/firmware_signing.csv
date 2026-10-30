@@ -1,0 +1,7 @@
+signature_scheme,bytes_per_signature,million_devices_GB
+ECDSA-P256,64,0.064
+Ed25519,64,0.064
+RSA-2048-PSS,256,0.256
+ML-DSA-65,3309,3.309
+ML-DSA-44,2420,2.42
+SLH-DSA-128s,7856,7.856

@@ -1,0 +1,6 @@
+primitive,mode,classical_bits,quantum_bits,key_length_restore_factor
+AES-128,key search,128,64.0,2.0
+AES-256,key search,256,128.0,2.0
+ChaCha20-256,key search,256,128.0,2.0
+SHA-256 preimage,preimage search,256,128.0,2.0
+SHA-256 collision,quantum collision,256,85.33333333333333,3.0

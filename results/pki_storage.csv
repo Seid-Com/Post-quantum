@@ -1,0 +1,13 @@
+certificates,certificate_type,bytes_per_cert,total_GB
+10000,ECDSA-P256 cert,336,0.003
+10000,RSA-2048 cert,733,0.007
+10000,ML-DSA-65 cert (modelled),2197,0.022
+10000,"ML-DSA-65 cert (modelled, PQC CA)",5435,0.054
+10000,SLH-DSA-128s cert (modelled),277,0.003
+10000,"SLH-DSA-128s cert (modelled, PQC CA)",8062,0.081
+1000000,ECDSA-P256 cert,336,0.336
+1000000,RSA-2048 cert,733,0.733
+1000000,ML-DSA-65 cert (modelled),2197,2.197
+1000000,"ML-DSA-65 cert (modelled, PQC CA)",5435,5.435
+1000000,SLH-DSA-128s cert (modelled),277,0.277
+1000000,"SLH-DSA-128s cert (modelled, PQC CA)",8062,8.062

@@ -1,0 +1,687 @@
+{
+  "seed": 20261023,
+  "scenarios": {
+    "early": {
+      "dist": "lognorm",
+      "median": 3.0,
+      "sigma": 0.25,
+      "note": "median CRQC arrival 2029"
+    },
+    "central": {
+      "dist": "lognorm",
+      "median": 9.0,
+      "sigma": 0.35,
+      "note": "median CRQC arrival 2035"
+    },
+    "late": {
+      "dist": "lognorm",
+      "median": 19.0,
+      "sigma": 0.45,
+      "note": "median CRQC arrival 2045"
+    },
+    "exp-matched": {
+      "dist": "exp",
+      "median": 9.0,
+      "sigma": null,
+      "note": "exponential, median 2035"
+    }
+  },
+  "validations": [
+    {
+      "check": "T1 closed-form vs quadrature",
+      "value": 1.9218714384785618e-15,
+      "tolerance": 1e-08,
+      "status": "PASS"
+    },
+    {
+      "check": "T1 closed-form vs Monte Carlo (N=200k)",
+      "value": 2.650621824876731,
+      "tolerance": 4.0,
+      "status": "PASS"
+    },
+    {
+      "check": "T2 bracket signs (g(0+)<0<g(inf))",
+      "value": 1.0,
+      "tolerance": 1.0,
+      "status": "PASS"
+    },
+    {
+      "check": "T2 grid-argmin relative deviation (max)",
+      "value": 0.0027898301219112225,
+      "tolerance": 0.05,
+      "status": "PASS"
+    },
+    {
+      "check": "T2 cost gap at m* vs grid min (max rel)",
+      "value": 1.7533188962748172e-05,
+      "tolerance": 0.01,
+      "status": "PASS"
+    },
+    {
+      "check": "T3 monotonicity sign agreement (fraction)",
+      "value": 1.0,
+      "tolerance": 1.0,
+      "status": "PASS"
+    },
+    {
+      "check": "T4 Monte Carlo feasibility coverage (all rows)",
+      "value": 1.0,
+      "tolerance": 1.0,
+      "status": "PASS"
+    }
+  ],
+  "sector_summary": [
+    {
+      "sector": "Healthcare",
+      "urgent_share": 1.0,
+      "high_share": 0.0,
+      "infeasible_share": 0.5056666666666667,
+      "median_MUI": 10.141419877611023,
+      "median_m_star": 0.557209910290179,
+      "median_tau": 5.77636963360727
+    },
+    {
+      "sector": "Electricity grid",
+      "urgent_share": 0.9996666666666667,
+      "high_share": 0.0003333333333333333,
+      "infeasible_share": 0.32066666666666666,
+      "median_MUI": 9.077668952519051,
+      "median_m_star": 0.5102940835206449,
+      "median_tau": 4.743302837075113
+    },
+    {
+      "sector": "Government & defence",
+      "urgent_share": 1.0,
+      "high_share": 0.0,
+      "infeasible_share": 0.2643333333333333,
+      "median_MUI": 9.02565088417023,
+      "median_m_star": 0.4899191299292881,
+      "median_tau": 4.547420385444389
+    },
+    {
+      "sector": "Rail & transport",
+      "urgent_share": 0.9913333333333333,
+      "high_share": 0.008666666666666666,
+      "infeasible_share": 0.14633333333333334,
+      "median_MUI": 4.594032133830892,
+      "median_m_star": 0.8198507255090297,
+      "median_tau": 3.769276229754868
+    },
+    {
+      "sector": "Financial services",
+      "urgent_share": 0.9443333333333334,
+      "high_share": 0.051,
+      "infeasible_share": 0.0033333333333333335,
+      "median_MUI": 3.096793516288063,
+      "median_m_star": 0.8141517555364481,
+      "median_tau": 2.6423523592604625
+    },
+    {
+      "sector": "Telecommunications",
+      "urgent_share": 0.49666666666666665,
+      "high_share": 0.39166666666666666,
+      "infeasible_share": 0.0,
+      "median_MUI": 0.9950188859948947,
+      "median_m_star": 2.415831598023544,
+      "median_tau": 2.3537690601097405
+    }
+  ],
+  "sector_summary_by_scenario": [
+    {
+      "sector": "Electricity grid",
+      "urgent_share": 0.9996666666666667,
+      "infeasible_share": 0.9416666666666667,
+      "median_MUI": 9.363187774287692,
+      "median_m_star": 0.49656821577112176,
+      "scenario": "early"
+    },
+    {
+      "sector": "Financial services",
+      "urgent_share": 0.9906666666666667,
+      "infeasible_share": 0.6546666666666666,
+      "median_MUI": 4.6680220804516965,
+      "median_m_star": 0.5525906905946174,
+      "scenario": "early"
+    },
+    {
+      "sector": "Government & defence",
+      "urgent_share": 1.0,
+      "infeasible_share": 0.9423333333333334,
+      "median_MUI": 9.352656555068219,
+      "median_m_star": 0.47628461692881774,
+      "scenario": "early"
+    },
+    {
+      "sector": "Healthcare",
+      "urgent_share": 1.0,
+      "infeasible_share": 0.9736666666666667,
+      "median_MUI": 10.37919160606868,
+      "median_m_star": 0.5445526342606514,
+      "scenario": "early"
+    },
+    {
+      "sector": "Rail & transport",
+      "urgent_share": 0.9963333333333333,
+      "infeasible_share": 0.8903333333333333,
+      "median_MUI": 5.469836246210717,
+      "median_m_star": 0.6852476203834384,
+      "scenario": "early"
+    },
+    {
+      "sector": "Telecommunications",
+      "urgent_share": 0.9633333333333334,
+      "infeasible_share": 0.5813333333333334,
+      "median_MUI": 2.920742805197216,
+      "median_m_star": 0.8126240146845083,
+      "scenario": "early"
+    },
+    {
+      "sector": "Electricity grid",
+      "urgent_share": 0.9996666666666667,
+      "infeasible_share": 0.32066666666666666,
+      "median_MUI": 9.077668952519051,
+      "median_m_star": 0.5102940835206449,
+      "scenario": "central"
+    },
+    {
+      "sector": "Financial services",
+      "urgent_share": 0.9443333333333334,
+      "infeasible_share": 0.0033333333333333335,
+      "median_MUI": 3.096793516288063,
+      "median_m_star": 0.8141517555364481,
+      "scenario": "central"
+    },
+    {
+      "sector": "Government & defence",
+      "urgent_share": 1.0,
+      "infeasible_share": 0.2643333333333333,
+      "median_MUI": 9.02565088417023,
+      "median_m_star": 0.4899191299292881,
+      "scenario": "central"
+    },
+    {
+      "sector": "Healthcare",
+      "urgent_share": 1.0,
+      "infeasible_share": 0.5056666666666667,
+      "median_MUI": 10.141419877611023,
+      "median_m_star": 0.557209910290179,
+      "scenario": "central"
+    },
+    {
+      "sector": "Rail & transport",
+      "urgent_share": 0.9913333333333333,
+      "infeasible_share": 0.14633333333333334,
+      "median_MUI": 4.594032133830892,
+      "median_m_star": 0.8198507255090297,
+      "scenario": "central"
+    },
+    {
+      "sector": "Telecommunications",
+      "urgent_share": 0.49666666666666665,
+      "infeasible_share": 0.0,
+      "median_MUI": 0.9950188859948947,
+      "median_m_star": 2.415831598023544,
+      "scenario": "central"
+    },
+    {
+      "sector": "Electricity grid",
+      "urgent_share": 0.997,
+      "infeasible_share": 0.0,
+      "median_MUI": 6.428403732283705,
+      "median_m_star": 0.7046762875108444,
+      "scenario": "late"
+    },
+    {
+      "sector": "Financial services",
+      "urgent_share": 0.6766666666666666,
+      "infeasible_share": 0.0,
+      "median_MUI": 1.4194579466365633,
+      "median_m_star": 1.8148017859091248,
+      "scenario": "late"
+    },
+    {
+      "sector": "Government & defence",
+      "urgent_share": 0.997,
+      "infeasible_share": 0.0,
+      "median_MUI": 5.899100856485548,
+      "median_m_star": 0.7507345966529896,
+      "scenario": "late"
+    },
+    {
+      "sector": "Healthcare",
+      "urgent_share": 0.9996666666666667,
+      "infeasible_share": 0.022333333333333334,
+      "median_MUI": 7.189844604451922,
+      "median_m_star": 0.7883295261119727,
+      "scenario": "late"
+    },
+    {
+      "sector": "Rail & transport",
+      "urgent_share": 0.8946666666666667,
+      "infeasible_share": 0.0,
+      "median_MUI": 2.4336553164052317,
+      "median_m_star": 1.5248481228581712,
+      "scenario": "late"
+    },
+    {
+      "sector": "Telecommunications",
+      "urgent_share": 0.07,
+      "infeasible_share": 0.0,
+      "median_MUI": 0.5270898185566597,
+      "median_m_star": 4.563201524785747,
+      "scenario": "late"
+    }
+  ],
+  "policy_value": [
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 18.337895045918184,
+      "median_cost": 11.02436665102568,
+      "p90_cost": 43.97979881094343,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN
+    },
+    {
+      "policy": "model-optimal (m = m*)",
+      "mean_cost": 3.5993524079453283,
+      "median_cost": 3.339191311080717,
+      "p90_cost": 6.802664246739436,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 37.06383126420164,
+      "median_cost": 26.79298297127597,
+      "p90_cost": 78.89299684486156,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 59.99539981139839,
+      "median_cost": 43.841168652717286,
+      "p90_cost": 124.80170987674367,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 18.337895045918184,
+      "median_cost": 11.02436665102568,
+      "p90_cost": 43.97979881094343,
+      "mean_regret_vs_optimal": 14.738542637972856,
+      "regret_ci_low": 14.409996394166205,
+      "regret_ci_high": 15.067088881779506
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 37.06383126420164,
+      "median_cost": 26.79298297127597,
+      "p90_cost": 78.89299684486156,
+      "mean_regret_vs_optimal": 33.46447885625631,
+      "regret_ci_low": 32.94308552441381,
+      "regret_ci_high": 33.9858721880988
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 59.99539981139839,
+      "median_cost": 43.841168652717286,
+      "p90_cost": 124.80170987674367,
+      "mean_regret_vs_optimal": 56.396047403453075,
+      "regret_ci_low": 55.572524221188736,
+      "regret_ci_high": 57.21957058571741
+    }
+  ],
+  "policy_value_by_scenario": [
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 20.704012154081624,
+      "median_cost": 13.277844710737993,
+      "p90_cost": 46.13856329113498,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "early"
+    },
+    {
+      "policy": "model-optimal (m = m*)",
+      "mean_cost": 4.255610334577435,
+      "median_cost": 3.8506065664600975,
+      "p90_cost": 7.252672633863256,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "early"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 41.83673544027452,
+      "median_cost": 31.22560620159468,
+      "p90_cost": 83.67725475658588,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "early"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 65.1035889998916,
+      "median_cost": 48.595366951446124,
+      "p90_cost": 130.13734423466207,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "early"
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 20.704012154081624,
+      "median_cost": 13.277844710737993,
+      "p90_cost": 46.13856329113498,
+      "mean_regret_vs_optimal": 16.44840181950419,
+      "regret_ci_low": 16.117363617546474,
+      "regret_ci_high": 16.77944002146191,
+      "scenario": "early"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 41.83673544027452,
+      "median_cost": 31.22560620159468,
+      "p90_cost": 83.67725475658588,
+      "mean_regret_vs_optimal": 37.58112510569709,
+      "regret_ci_low": 37.055885526675574,
+      "regret_ci_high": 38.106364684718606,
+      "scenario": "early"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 65.1035889998916,
+      "median_cost": 48.595366951446124,
+      "p90_cost": 130.13734423466207,
+      "mean_regret_vs_optimal": 60.84797866531417,
+      "regret_ci_low": 60.017008456377,
+      "regret_ci_high": 61.67894887425135,
+      "scenario": "early"
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 18.337895045918184,
+      "median_cost": 11.02436665102568,
+      "p90_cost": 43.97979881094343,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "central"
+    },
+    {
+      "policy": "model-optimal (m = m*)",
+      "mean_cost": 3.5993524079453283,
+      "median_cost": 3.339191311080717,
+      "p90_cost": 6.802664246739436,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "central"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 37.06383126420164,
+      "median_cost": 26.79298297127597,
+      "p90_cost": 78.89299684486156,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "central"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 59.99539981139839,
+      "median_cost": 43.841168652717286,
+      "p90_cost": 124.80170987674367,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "central"
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 18.337895045918184,
+      "median_cost": 11.02436665102568,
+      "p90_cost": 43.97979881094343,
+      "mean_regret_vs_optimal": 14.738542637972856,
+      "regret_ci_low": 14.409996394166205,
+      "regret_ci_high": 15.067088881779506,
+      "scenario": "central"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 37.06383126420164,
+      "median_cost": 26.79298297127597,
+      "p90_cost": 78.89299684486156,
+      "mean_regret_vs_optimal": 33.46447885625631,
+      "regret_ci_low": 32.94308552441381,
+      "regret_ci_high": 33.9858721880988,
+      "scenario": "central"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 59.99539981139839,
+      "median_cost": 43.841168652717286,
+      "p90_cost": 124.80170987674367,
+      "mean_regret_vs_optimal": 56.396047403453075,
+      "regret_ci_low": 55.572524221188736,
+      "regret_ci_high": 57.21957058571741,
+      "scenario": "central"
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 10.369970771913517,
+      "median_cost": 4.602563141562861,
+      "p90_cost": 26.75149903464981,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "late"
+    },
+    {
+      "policy": "model-optimal (m = m*)",
+      "mean_cost": 2.304966843681672,
+      "median_cost": 1.9355466398205623,
+      "p90_cost": 4.860911176137325,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "late"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 21.033865264870894,
+      "median_cost": 13.075130485958496,
+      "p90_cost": 50.21677828206848,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "late"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 37.70870070083661,
+      "median_cost": 24.858508981699593,
+      "p90_cost": 85.86512497949907,
+      "mean_regret_vs_optimal": NaN,
+      "regret_ci_low": NaN,
+      "regret_ci_high": NaN,
+      "scenario": "late"
+    },
+    {
+      "policy": "immediate (m = tau)",
+      "mean_cost": 10.369970771913517,
+      "median_cost": 4.602563141562861,
+      "p90_cost": 26.75149903464981,
+      "mean_regret_vs_optimal": 8.065003928231846,
+      "regret_ci_low": 7.839764254403599,
+      "regret_ci_high": 8.290243602060093,
+      "scenario": "late"
+    },
+    {
+      "policy": "fixed 2035 (m = 9)",
+      "mean_cost": 21.033865264870894,
+      "median_cost": 13.075130485958496,
+      "p90_cost": 50.21677828206848,
+      "mean_regret_vs_optimal": 18.728898421189214,
+      "regret_ci_low": 18.360100686842923,
+      "regret_ci_high": 19.097696155535505,
+      "scenario": "late"
+    },
+    {
+      "policy": "fixed 2040 (m = 14)",
+      "mean_cost": 37.70870070083661,
+      "median_cost": 24.858508981699593,
+      "p90_cost": 85.86512497949907,
+      "mean_regret_vs_optimal": 35.40373385715493,
+      "regret_ci_low": 34.77871762193764,
+      "regret_ci_high": 36.02875009237223,
+      "scenario": "late"
+    }
+  ],
+  "latest_start_eps010": [
+    {
+      "scenario": "early",
+      "epsilon": 0.1,
+      "tau": 2.0,
+      "F_inv_eps": 2.177602274214538,
+      "feasible": true,
+      "latest_start": 0.177602274214538,
+      "completion": 2.177602274214538,
+      "empirical_P_arrival_before_completion": 0.099905,
+      "mc_ok": true
+    },
+    {
+      "scenario": "early",
+      "epsilon": 0.1,
+      "tau": 5.0,
+      "F_inv_eps": 2.177602274214538,
+      "feasible": false,
+      "latest_start": NaN,
+      "completion": 5.0,
+      "empirical_P_arrival_before_completion": 0.979255,
+      "mc_ok": true
+    },
+    {
+      "scenario": "central",
+      "epsilon": 0.1,
+      "tau": 2.0,
+      "F_inv_eps": 5.747020401139128,
+      "feasible": true,
+      "latest_start": 3.747020401139128,
+      "completion": 5.747020401139128,
+      "empirical_P_arrival_before_completion": 0.09981,
+      "mc_ok": true
+    },
+    {
+      "scenario": "central",
+      "epsilon": 0.1,
+      "tau": 5.0,
+      "F_inv_eps": 5.747020401139128,
+      "feasible": true,
+      "latest_start": 0.7470204011391282,
+      "completion": 5.747020401139128,
+      "empirical_P_arrival_before_completion": 0.09948,
+      "mc_ok": true
+    },
+    {
+      "scenario": "late",
+      "epsilon": 0.1,
+      "tau": 2.0,
+      "F_inv_eps": 10.673251744240037,
+      "feasible": true,
+      "latest_start": 8.673251744240037,
+      "completion": 10.673251744240037,
+      "empirical_P_arrival_before_completion": 0.10013,
+      "mc_ok": true
+    },
+    {
+      "scenario": "late",
+      "epsilon": 0.1,
+      "tau": 5.0,
+      "F_inv_eps": 10.673251744240037,
+      "feasible": true,
+      "latest_start": 5.673251744240037,
+      "completion": 10.673251744240037,
+      "empirical_P_arrival_before_completion": 0.100015,
+      "mc_ok": true
+    },
+    {
+      "scenario": "exp-matched",
+      "epsilon": 0.1,
+      "tau": 2.0,
+      "F_inv_eps": 1.36802784100545,
+      "feasible": false,
+      "latest_start": NaN,
+      "completion": 2.0,
+      "empirical_P_arrival_before_completion": 0.141835,
+      "mc_ok": true
+    },
+    {
+      "scenario": "exp-matched",
+      "epsilon": 0.1,
+      "tau": 5.0,
+      "F_inv_eps": 1.36802784100545,
+      "feasible": false,
+      "latest_start": NaN,
+      "completion": 5.0,
+      "empirical_P_arrival_before_completion": 0.3188,
+      "mc_ok": true
+    }
+  ],
+  "grover": [
+    {
+      "primitive": "AES-128",
+      "mode": "key search",
+      "classical_bits": 128,
+      "quantum_bits": 64.0,
+      "key_length_restore_factor": 2.0
+    },
+    {
+      "primitive": "AES-256",
+      "mode": "key search",
+      "classical_bits": 256,
+      "quantum_bits": 128.0,
+      "key_length_restore_factor": 2.0
+    },
+    {
+      "primitive": "ChaCha20-256",
+      "mode": "key search",
+      "classical_bits": 256,
+      "quantum_bits": 128.0,
+      "key_length_restore_factor": 2.0
+    },
+    {
+      "primitive": "SHA-256 preimage",
+      "mode": "preimage search",
+      "classical_bits": 256,
+      "quantum_bits": 128.0,
+      "key_length_restore_factor": 2.0
+    },
+    {
+      "primitive": "SHA-256 collision",
+      "mode": "quantum collision",
+      "classical_bits": 256,
+      "quantum_bits": 85.33333333333333,
+      "key_length_restore_factor": 3.0
+    }
+  ],
+  "theorem2_headline": {
+    "n_assets": 400,
+    "m_star_median_years": 1.282840152150616,
+    "m_star_range": [
+      0.12222348257862273,
+      6.695202212692134
+    ]
+  }
+}

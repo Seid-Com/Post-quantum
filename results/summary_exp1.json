@@ -1,0 +1,223 @@
+{
+  "env": {
+    "platform": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.10",
+    "cpu": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+    "packages": {
+      "pqcrypto": "1.0.0",
+      "cryptography": "50.0.2",
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2"
+    },
+    "openssl_classical_cryptography": "4.0.0",
+    "openssl_pqc_dll": "OpenSSL 4.0.2 25 Aug 2026",
+    "openssl_pqc_dll_path": "C:\\Users\\Kasish\\AppData\\Local\\pqenv\\Library\\bin\\libcrypto-4-x64.dll",
+    "timestamp_utc": "2026-10-23T06:10:23Z",
+    "seed": 20261023
+  },
+  "conformance": {
+    "pass": 38,
+    "total_checks": 38,
+    "fail": 0
+  },
+  "spread": {
+    "ML-DSA-44:sign": {
+      "openssl_us": 1326.514,
+      "pqcrypto_us": 8978.005,
+      "ratio_pqcrypto_over_openssl": 6.77
+    },
+    "ML-DSA-65:sign": {
+      "openssl_us": 1451.2,
+      "pqcrypto_us": 18869.857,
+      "ratio_pqcrypto_over_openssl": 13.0
+    },
+    "ML-DSA-87:sign": {
+      "openssl_us": 1714.794,
+      "pqcrypto_us": 29670.013,
+      "ratio_pqcrypto_over_openssl": 17.3
+    },
+    "SLH-DSA-SHA2-128s:sign": {
+      "openssl_us": 663765.767,
+      "pqcrypto_us": 2222975.225,
+      "ratio_pqcrypto_over_openssl": 3.35
+    },
+    "SLH-DSA-SHA2-128f:sign": {
+      "openssl_us": 25247.53,
+      "pqcrypto_us": 85152.93,
+      "ratio_pqcrypto_over_openssl": 3.37
+    },
+    "ML-KEM-768:encaps": {
+      "openssl_us": 73.707,
+      "pqcrypto_us": 96.419,
+      "ratio_pqcrypto_over_openssl": 1.31
+    }
+  },
+  "handshake": [
+    {
+      "scenario": "Classical: X25519 + ECDSA-P256",
+      "kem_material": 64,
+      "cert": 336,
+      "signature": 64,
+      "total_bytes": 464,
+      "mutual_auth_bytes": 864,
+      "overhead_vs_classical": 1.0
+    },
+    {
+      "scenario": "Classical: X25519 + RSA-2048-PSS",
+      "kem_material": 64,
+      "cert": 733,
+      "signature": 256,
+      "total_bytes": 1053,
+      "mutual_auth_bytes": 2042,
+      "overhead_vs_classical": 2.27
+    },
+    {
+      "scenario": "PQC: ML-KEM-768 + ML-DSA-65",
+      "kem_material": 1088,
+      "cert": 2197,
+      "signature": 3309,
+      "total_bytes": 6594,
+      "mutual_auth_bytes": 12100,
+      "overhead_vs_classical": 14.21
+    },
+    {
+      "scenario": "PQC: ML-KEM-512 + ML-DSA-44",
+      "kem_material": 768,
+      "cert": 1557,
+      "signature": 2420,
+      "total_bytes": 4745,
+      "mutual_auth_bytes": 8722,
+      "overhead_vs_classical": 10.23
+    },
+    {
+      "scenario": "PQC: ML-KEM-1024 + SLH-DSA-128s",
+      "kem_material": 1568,
+      "cert": 277,
+      "signature": 7856,
+      "total_bytes": 9701,
+      "mutual_auth_bytes": 17834,
+      "overhead_vs_classical": 20.91
+    },
+    {
+      "scenario": "Hybrid: X25519+ECDSA and ML-KEM-768+ML-DSA-65",
+      "kem_material": 1152,
+      "cert": 2533,
+      "signature": 3373,
+      "total_bytes": 7058,
+      "mutual_auth_bytes": 12964,
+      "overhead_vs_classical": 15.21
+    }
+  ],
+  "headline": {
+    "classical": {
+      "X25519:keygen": 46.682,
+      "X25519:shared_secret": 37.702,
+      "ECDSA-P256:keygen": 22.474,
+      "ECDSA-P256:sign": 36.77,
+      "ECDSA-P256:verify": 179.056,
+      "Ed25519:keygen": 98.506,
+      "Ed25519:sign": 95.947,
+      "Ed25519:verify": 125.288,
+      "RSA-2048:keygen": 41947.4,
+      "RSA-2048:sign": 1415.136,
+      "RSA-2048:verify": 72.712,
+      "RSA-3072:sign": 1972.66,
+      "RSA-3072:verify": 118.417,
+      "AES-128-GCM:encrypt_1KB": 2.98,
+      "AES-256-GCM:encrypt_1KB": 3.08
+    },
+    "OpenSSL-EVP": {
+      "X25519:keygen": 46.682,
+      "X25519:shared_secret": 37.702,
+      "ECDSA-P256:keygen": 22.474,
+      "ECDSA-P256:sign": 36.77,
+      "ECDSA-P256:verify": 179.056,
+      "Ed25519:keygen": 98.506,
+      "Ed25519:sign": 95.947,
+      "Ed25519:verify": 125.288,
+      "RSA-2048:keygen": 41947.4,
+      "RSA-2048:sign": 1415.136,
+      "RSA-2048:verify": 72.712,
+      "RSA-3072:sign": 1972.66,
+      "RSA-3072:verify": 118.417,
+      "AES-128-GCM:encrypt_1KB": 2.98,
+      "AES-256-GCM:encrypt_1KB": 3.08,
+      "ML-KEM-512:keygen": 128.152,
+      "ML-KEM-512:encaps": 117.95,
+      "ML-KEM-512:decaps": 78.88,
+      "ML-KEM-768:keygen": 89.093,
+      "ML-KEM-768:encaps": 73.707,
+      "ML-KEM-768:decaps": 103.695,
+      "ML-KEM-1024:keygen": 138.544,
+      "ML-KEM-1024:encaps": 102.102,
+      "ML-KEM-1024:decaps": 136.92,
+      "ML-DSA-44:keygen": 174.792,
+      "ML-DSA-44:sign": 1326.514,
+      "ML-DSA-44:verify": 372.217,
+      "ML-DSA-65:keygen": 292.246,
+      "ML-DSA-65:sign": 1451.2,
+      "ML-DSA-65:verify": 505.322,
+      "ML-DSA-87:keygen": 875.039,
+      "ML-DSA-87:sign": 1714.794,
+      "ML-DSA-87:verify": 415.117,
+      "SLH-DSA-SHA2-128s:keygen": 111336.9,
+      "SLH-DSA-SHA2-128s:sign": 663765.767,
+      "SLH-DSA-SHA2-128s:verify": 1284.3,
+      "SLH-DSA-SHA2-128f:keygen": 2176.493,
+      "SLH-DSA-SHA2-128f:sign": 25247.53,
+      "SLH-DSA-SHA2-128f:verify": 3044.79
+    },
+    "pqcrypto-Rust": {
+      "X25519:keygen": 46.682,
+      "X25519:shared_secret": 37.702,
+      "ECDSA-P256:keygen": 22.474,
+      "ECDSA-P256:sign": 36.77,
+      "ECDSA-P256:verify": 179.056,
+      "Ed25519:keygen": 98.506,
+      "Ed25519:sign": 95.947,
+      "Ed25519:verify": 125.288,
+      "RSA-2048:keygen": 41947.4,
+      "RSA-2048:sign": 1415.136,
+      "RSA-2048:verify": 72.712,
+      "RSA-3072:sign": 1972.66,
+      "RSA-3072:verify": 118.417,
+      "AES-128-GCM:encrypt_1KB": 2.98,
+      "AES-256-GCM:encrypt_1KB": 3.08,
+      "ML-KEM-512:keygen": 109.465,
+      "ML-KEM-512:encaps": 61.996,
+      "ML-KEM-512:decaps": 84.333,
+      "ML-KEM-768:keygen": 80.686,
+      "ML-KEM-768:encaps": 96.419,
+      "ML-KEM-768:decaps": 122.391,
+      "ML-KEM-1024:keygen": 122.431,
+      "ML-KEM-1024:encaps": 142.277,
+      "ML-KEM-1024:decaps": 185.697,
+      "ML-DSA-44:keygen": 368.856,
+      "ML-DSA-44:sign": 8978.005,
+      "ML-DSA-44:verify": 157.09,
+      "ML-DSA-65:keygen": 281.092,
+      "ML-DSA-65:sign": 18869.857,
+      "ML-DSA-65:verify": 256.317,
+      "ML-DSA-87:keygen": 440.724,
+      "ML-DSA-87:sign": 29670.013,
+      "ML-DSA-87:verify": 418.767,
+      "SLH-DSA-SHA2-128s:keygen": 279904.625,
+      "SLH-DSA-SHA2-128s:sign": 2222975.225,
+      "SLH-DSA-SHA2-128s:verify": 3639.675,
+      "SLH-DSA-SHA2-128f:keygen": 7163.503,
+      "SLH-DSA-SHA2-128f:sign": 85152.93,
+      "SLH-DSA-SHA2-128f:verify": 4608.81,
+      "HQC-128:keygen": 2270.726,
+      "HQC-128:encaps": 5779.24,
+      "HQC-128:decaps": 8353.049,
+      "SNTRUP-761:keygen": 29440.047,
+      "SNTRUP-761:encaps": 307.627,
+      "SNTRUP-761:decaps": 1172.272,
+      "Classic-McEliece-460896:keygen": 525691.867,
+      "Classic-McEliece-460896:encaps": 735.632,
+      "Classic-McEliece-460896:decaps": 33655.57
+    }
+  }
+}

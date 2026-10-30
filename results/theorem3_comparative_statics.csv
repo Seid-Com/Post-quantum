@@ -1,0 +1,15 @@
+direction,L,monotone_decreasing,monotone_increasing,v
+v,1.0,True,,
+v,5.0,True,,
+v,10.0,True,,
+v,20.0,True,,
+v,30.0,True,,
+k,1.0,,True,
+k,5.0,,True,
+k,10.0,,True,
+k,20.0,,True,
+k,30.0,,True,
+L,,True,,0.3
+L,,True,,1.0
+L,,True,,10.0
+L,,True,,100.0

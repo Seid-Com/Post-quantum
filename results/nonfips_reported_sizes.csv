@@ -1,0 +1,13 @@
+algorithm,field,reference_source,reference_value,pqcrypto_reported
+HQC-128,public_key,"NIST HQC selection (2025), reference implementation sizes",2249,2241
+HQC-128,secret_key,"NIST HQC selection (2025), reference implementation sizes",4433,2321
+HQC-128,ciphertext,"NIST HQC selection (2025), reference implementation sizes",4489,4433
+HQC-128,shared_secret,"NIST HQC selection (2025), reference implementation sizes",64,32
+SNTRUP-761,public_key,NTRU Prime reference implementation,1138,1158
+SNTRUP-761,secret_key,NTRU Prime reference implementation,1652,1763
+SNTRUP-761,ciphertext,NTRU Prime reference implementation,1047,1039
+SNTRUP-761,shared_secret,NTRU Prime reference implementation,32,32
+Classic-McEliece-460896,public_key,Classic McEliece round-4 submission (expanded secret key),524160,524160
+Classic-McEliece-460896,secret_key,Classic McEliece round-4 submission (expanded secret key),1044992,13608
+Classic-McEliece-460896,ciphertext,Classic McEliece round-4 submission (expanded secret key),188,156
+Classic-McEliece-460896,shared_secret,Classic McEliece round-4 submission (expanded secret key),32,32
